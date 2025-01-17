@@ -23,7 +23,7 @@
 .orange-1{
     color: rgb(255, 144, 14);
 }
-button{
+.btn{
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 8px;
@@ -40,7 +40,7 @@ button{
     padding: 20px 25px;
     transition: 1s;
 }
-button:hover{
+.btn:hover{
     color: rgb(255, 144, 14);
     background-color: white;
     border: 1px solid rgb(255, 144, 14);
@@ -139,6 +139,57 @@ main{
     font-weight: 700;
 }
 
+/* main section features  */
+.features{
+    gap: 140px;
+}
+.features-container{
+    max-width: 590px;
+}
+.features-title{
+    border-left: 5px solid rgb(255, 144, 14);
+    padding-left: 21px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}   
+.features-card{
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    background: rgb(255, 255, 255);
+    margin-top: 40px;
+}
+.features-card .features-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.features-card .features-description{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.features-architect img{
+    width: 100%;
+}
+.btn-2{
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background: rgb(255, 144, 14);
+    padding: 46px 42px;
+    margin-left: -100px;
+    margin-top: -140px;
+}
+.btn-2 span{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.btn-2 p{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
 /* main section some-facts */
 .facts-title{
     font-size: 2.8rem;
@@ -170,25 +221,79 @@ main{
     font-weight: 600;
 }
 
+/* main section our-sponsors*/
+.sponsors-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsors-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsors-companies img{
+    filter: grayscale(100%);
+}
+
+/* footer  */
+footer{
+    margin: 150px 240px;
+    border-radius: 8px;
+    background: rgb(255, 244, 231);
+    justify-items: center;
+}
+footer p{
+    max-width: 1440px;
+    padding: 45px;
+}
+
 /* responsive media query for small device */
 @media screen and (max-width: 576px) {
-    .navbar, .nav-links{
+    .navbar, .nav-links, .features{
         flex-direction: column;
     }
     .teams{
         flex-direction: column;
     }
-    .team-img-container{
+    .team-img-container, 
+    .facts-container,
+    .sponsors-companies
+    {
         grid-template-columns: repeat(1, 1fr);
     }
     .our-features{
+        margin-left: 20px;
+    }
+    .facts-container,
+    .sponsors-companies{
+        justify-items: center;
+        gap: 24px;
+    }
+    .btn-2{
+        margin-top: 20px;
         margin-left: 20px;
     }
 }
 
 /* responsive media query for medium device */
 @media screen and (min-width: 576.01px) and (max-width: 992px) {
-    .teams{
+    .teams, .features{
         flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
+    }
+    .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .sponsors-companies{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+    .btn-2{
+        margin-top: 20px;
+        margin-left: 20px;
     }
 }
