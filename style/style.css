@@ -273,6 +273,9 @@ footer p{
         margin-top: 20px;
         margin-left: 20px;
     }
+    footer {
+        margin: 50px 20px;
+    }
 }
 
 /* responsive media query for medium device */
@@ -295,5 +298,8 @@ footer p{
     .btn-2{
         margin-top: 20px;
         margin-left: 20px;
+    }
+    footer{
+        margin: 50px;
     }
 }
